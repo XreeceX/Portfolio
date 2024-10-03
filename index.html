@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="C:\Users\reece\OneDrive\Desktop\HTML\personal website\style.css">
+  <link rel="stylesheet" href="C:\Users\reece\OneDrive\Desktop\HTML\personal website\Portfolio\style.css">
 
   <!--
     - google font link
@@ -138,6 +138,7 @@
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
+          
 
           <li class="social-item">
             <a href="https://www.instagram.com/un4sean_me?igsh=MW43a20waGNjZXBjdw==" class="social-link">
@@ -626,8 +627,8 @@
               </a>
             </li>
 
-            <!-- <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="Expense-Tracker">
+              <a href="https://github.com/XreeceX/Expense-Checker">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -637,13 +638,13 @@
                   <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">Expense-Tracker</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Application</p>
 
               </a>
             </li>
-
+            <!--
             <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
@@ -736,19 +737,19 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="sendEmail()" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" id="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" id="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span>How may i help you?</span>
             </button>
 
           </form>
@@ -756,6 +757,21 @@
         </section>
 
       </article>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      
+      <script >
+        function sendEmail(){
+          Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "reecerodri@gmail.com",
+            Password : "D81269DE31A1BB2CD939098EB1FB45100B8B",
+            To : 'reecerodri@gmail.com',
+            From : "reecerodri@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+            }).then(message => alert(message));
+        }
+      </script>
       
 
     </div>
@@ -770,7 +786,7 @@
   <!--
     - custom js link
   -->
-  <script src="C:\Users\reece\OneDrive\Desktop\HTML\personal website\script.js"></script>
+  <script src="C:\Users\reece\OneDrive\Desktop\HTML\personal website\Portfolio\script.js"></script>
 
   <!--
     - ionicon link

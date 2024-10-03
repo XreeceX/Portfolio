@@ -58,7 +58,7 @@ let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
 
-  filterBtn[i].addEventListener("click", function () {
+  filterBtn[i].addEventListener("click", function (sendEmail) {
 
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
