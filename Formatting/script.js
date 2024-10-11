@@ -121,3 +121,41 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function sendEmail(event) {
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var fullname = document.getElementById("fullname").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+  
+    if (fullname && email && message) {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "your-gmail-username@gmail.com",
+        Password: "your-app-password",  // You need to create an App Password in your Google account
+        To: 'recipient-email@example.com',  // Replace with your recipient email
+        From: email,
+        Subject: `New Contact from ${fullname}`,
+        Body: `
+          <h2>New contact form submission</h2>
+          <p><strong>Name:</strong> ${fullname}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `
+      }).then(response => {
+        if (response === "OK") {
+          alert("Message sent successfully!");
+        } else {
+          alert("Failed to send the message: " + response);
+        }
+      }).catch(error => {
+        alert("Error sending email: " + error);
+      });
+    } else {
+      alert("Please fill out all fields.");
+    }
+  });
+  
+}

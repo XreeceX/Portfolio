@@ -7,20 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="/logo/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-
   <link rel="stylesheet" href="./Formatting/style.css">
 
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -28,16 +17,7 @@
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
@@ -645,78 +625,6 @@
 
               </a>
             </li>
-            <!--
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li> -->
 
           </ul>
 
@@ -727,72 +635,43 @@
       <!--
         - #CONTACT
       -->
-
       <article class="contact" data-page="contact">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
+      
         <section class="contact-form">
-
+      
           <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="sendEmail()" class="form" data-form>
-
+      
+          <form class="form" onsubmit="sendEmail(event)">
+      
             <div class="input-wrapper">
-              <input type="text" id="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" id="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" id="fullname" class="form-input" placeholder="Full name" required>
+      
+              <input type="email" id="email" class="form-input" placeholder="Email address" required>
             </div>
-
-            <textarea name="" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
+      
+            <textarea id="message" class="form-input" placeholder="Your Message" required></textarea>
+      
+            <button class="form-btn" type="submit">
               <ion-icon name="paper-plane"></ion-icon>
-              <span>How may i help you?</span>
+              <span>Contact me</span>
             </button>
-
+      
           </form>
-
+      
         </section>
-
+      
       </article>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
       
-      <script >
-        function sendEmail(){
-          Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "reecerodri@gmail.com",
-            Password : "D81269DE31A1BB2CD939098EB1FB45100B8B",
-            To : 'reecerodri@gmail.com',
-            From : "reecerodri@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-            }).then(message => alert(message));
-        }
-      </script>
-      
-
     </div>
 
   </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="./Formatting/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
